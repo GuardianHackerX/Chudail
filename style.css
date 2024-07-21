@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Love ya like a sister';
+}
+
+body {
+    background: #FFCDD2;
+    user-select: none;
+    /* overflow-x: hidden; */
+    color: #000000;
+}
+
+header {
+    background: #ffa1a1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 1.9em;
+    color: #000000;
+    user-select: none;
+    animation: slideRight 2s ease forwards;
+}
+
+.navigation {
+    height: 8vh;
+    animation: slideTop 2s ease forwards;
+}
+
+.navigation a {
+    position: relative;
+    top: .9vh;
+    font-size: 1.5em;
+    color: #000000;
+    user-select: none;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .4s;
+    
+}
+
+.navigation a:hover {
+    transition: 1s;
+    font-size: 1.6em;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: rgb(0, 255, 255);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+main {
+    position: relative;
+    top: 19vh;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.firstSection div {
+    width: 35%;
+    color: rgb(46, 255, 255);
+}
+
+.leftSection {
+    position: relative;
+    top: -23px;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+.leftSection img {
+    width: 70vh;
+    animation: zoomIn 2s ease forwards;
+}
+
+.rightSection {
+    width: 40%;
+    font-size: 1.8rem;
+    animation: slideTop 2s ease forwards;
+}
+
+hr {
+    position: relative;
+    left: 3%;
+    width: 94%;
+}
+
+.secondSection p {
+    font-size: 1.5rem;
+    position: relative;
+    top: 20px;
+    left: 5%;
+    width: 90%;
+    animation: zoomIn 2s ease forwards;
+}
+
+.navigation .active {
+    color: rgb(62, 110, 150);
+    cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slideTop {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(13px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes circleRotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    animation: slideRight 1.5s ease forwards;
+}
+
+.mainSection {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.container {
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 44%;
+    position: relative;
+    left: 10vh;
+    height: 20vh;
+}
+
+.container h2 {
+    margin: 2px;
+}
+
+.container p {
+    height: 30%;
+    margin: 5px;
+    font-size: 1.15rem;
+}
+
+.container .button {
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: 45%;
+}
+
+.container button {
+    cursor: pointer;
+    color: rgb(253, 25, 25);
+    width: 30%;
+    height: 100%;
+    transition: .5s;
+    border: 2px solid rgb(253, 25, 25);
+    border-radius: 10px;
+    background: transparent;
+    font-size: 1rem;
+    position: relative;
+    bottom: 8px;
+}
+
+.container button:hover {
+    border-color: rgb(25, 139, 25);
+    color: rgb(25, 139, 25);
+    background: transparent;
+    transition: .5s;
+}
+
+.left {
+    animation: slideRight 1.5s ease forwards;
+}
+
+.right {
+    animation: slideLeft 1.5s ease forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
